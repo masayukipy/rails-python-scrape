@@ -1,0 +1,2 @@
+class Rundate < ApplicationRecord
+end

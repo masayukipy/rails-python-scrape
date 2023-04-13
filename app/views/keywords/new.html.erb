@@ -1,0 +1,11 @@
+<div class="d-flex bd-highlight mb-3">
+    <div class="me-auto p-2 bd-highlight">
+        <h2>New</h2>
+    </div>
+    <div class="p-2 bd-highlight">
+        <!-- <button type="button" class="btn btn-secondary" onclick="showUserCreateBox()">Create</button> -->
+        <%= link_to "Back" , "/" , class: "btn btn-secondary" %>
+    </div>
+</div>
+
+<%= render "form", keyword: @keyword %>

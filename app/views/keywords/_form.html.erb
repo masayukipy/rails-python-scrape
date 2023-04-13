@@ -1,0 +1,21 @@
+<%= form_with model: keyword do |form| %>
+  <div>
+    <%= form.label :word %><br>
+    <%= form.text_field :word %>
+    <% keyword.errors.full_messages_for(:word).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :times %><br>
+    <%= form.number_field :times %><br>
+    <% keyword.errors.full_messages_for(:times).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
