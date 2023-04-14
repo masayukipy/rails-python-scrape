@@ -13,7 +13,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th>ID</th>
+                <th>No</th>
                 <th>Word</th>
                 <th>Times/m</th>
                 <!-- <th>Created Date</th>
@@ -23,10 +23,10 @@
             </tr>
         </thead>
         <tbody id="mytable">
-            <% @keywords.each do |keyword| %>
+            <% @keywords.each_with_index do |keyword, index| %>
                 <tr>
                     <th>
-                        <%= keyword.id %>
+                        <%= index + 1 %>
                     </th>
                     <th>
                         <%= keyword.word %>

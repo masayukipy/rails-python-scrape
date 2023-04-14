@@ -3,7 +3,7 @@ class CreateRundates < ActiveRecord::Migration[7.0]
     create_table :rundates do |t|
       t.integer :word_id
       t.datetime :date
-      t.boolean :status
+      t.integer :last_month
 
       t.timestamps
     end
