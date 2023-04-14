@@ -25,8 +25,28 @@ class Base:
             return True
         except: # noqa
             return False
+    
+    def get_drive(self):
+        options = Options()
+        options.add_argument('--headless')
+        options.add_argument('--no-sandbox')       
+        options.add_argument("--window-size=800,5000")
+        options.add_argument("user-agent=Mozilla/5.0 (X11; Linux x86_64) "
+                             "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36")
+        options.add_argument('--disable-dev-shm-usage')
+        driver = webdriver.Chrome(
+            service=Service(ChromeDriverManager().install()),
+            options=options
+        )
+        driver.get(self.url)
 
-    def run(self, url):
+        return driver
+            
+    def get_soup(self):
+        _soup = BeautifulSoup(self.driver.page_source, features="html.parser")
+        return _soup
+
+    def get_soup_from(self, url):
         options = Options()
         options.add_argument('--headless')
         options.add_argument('--no-sandbox')       
