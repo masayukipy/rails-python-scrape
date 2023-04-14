@@ -56,6 +56,8 @@ class KeywordsController < ApplicationController
     def destroy
         @keyword = Keyword.find(params[:id])
         @keyword.destroy
+        @rundates = Rundate.where(word_id: params[:id])
+        @rundates.destroy_all
 
         redirect_to @keyword, status: :see_other
     end
