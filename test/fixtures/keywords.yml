@@ -3,7 +3,9 @@
 one:
   word: MyString
   times: 1
+  status: false
 
 two:
   word: MyString
   times: 1
+  status: false

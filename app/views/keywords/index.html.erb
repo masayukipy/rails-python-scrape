@@ -3,7 +3,6 @@
         <h2>Home</h2>
     </div>
     <div class="p-2 bd-highlight">
-        <!-- <button type="button" class="btn btn-secondary" onclick="showUserCreateBox()">Create</button> -->
         <%= link_to "New" , new_keyword_path, class: "btn btn-success" %>
     </div>
 </div>
@@ -16,9 +15,6 @@
                 <th>No</th>
                 <th>Word</th>
                 <th>Times/m</th>
-                <!-- <th>Created Date</th>
-                <th>Updated Date</th> -->
-                <th>Status</th>
                 <th>Detail</th>
             </tr>
         </thead>
@@ -34,13 +30,9 @@
                     <th>
                         <%= keyword.times %>
                     </th>
-                    <!-- <th><%= keyword.created_at %></th>
-                    <th><%= keyword.updated_at %></th> -->
-                    <th>Enabled</th>
                     <th>
                         <%= link_to "Detail" , keyword %>
                     </th>
-                    <!-- <th><a href="">Edit</a></th> -->
                 </tr>
             <% end %>
         </tbody>

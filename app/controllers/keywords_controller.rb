@@ -1,4 +1,5 @@
-class KeywordsController < ApplicationController
+class KeywordsController < ApplicationController    
+    # $flag = true
     def index
         @keywords = Keyword.all
     end
@@ -59,9 +60,25 @@ class KeywordsController < ApplicationController
         redirect_to @keyword, status: :see_other
     end
 
+    # def run
+    #     if $flag
+    #         thread = Thread.new { blink_led_constant }
+    #         $flag = false
+    #     end
+    # end
+
     private
         def keyword_params
             params.require(:keyword).permit(:word, :times)
         end
+
+        # def blink_led_constant
+        #     loop do
+        #         puts "hello"
+        #         sleep(1)
+        #     end
+        # end
+
+
 end
 
